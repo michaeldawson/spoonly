@@ -14,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 # Database
 gem 'pg'
 
+# Network
+gem 'httparty'
+
 # Environment variables
 gem 'dotenv-rails'
 
