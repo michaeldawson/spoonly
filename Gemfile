@@ -14,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 # Database
 gem 'pg'
 
+# Environment variables
+gem 'dotenv-rails'
+
 # Faster boot up and auto-reloading
 gem 'bootsnap', '>= 1.1.0', require: false
 
