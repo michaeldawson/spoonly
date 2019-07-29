@@ -1,0 +1,38 @@
+AllCops:
+  Exclude:
+    - "db/**/*"
+    - "public/**/*"
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.3
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/LineLength:
+  Severity: refactor
+  Max: 100
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*"
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    "%w": "{}"
+    "%W": "{}"
+    "%i": "{}"
