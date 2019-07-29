@@ -28,7 +28,7 @@ end
 
 group :development, :test do
   # Debugging / autoloading
-  gem 'byebug', platforms: %i{mri mingw x64_mingw}
+  gem 'pry'
   gem 'listen'
 end
 
