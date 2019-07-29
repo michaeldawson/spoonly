@@ -33,6 +33,8 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'webmock'
 end
 
 gem 'tzinfo-data', platforms: %i{mingw mswin x64_mingw jruby}
