@@ -30,5 +30,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore the file for test run details
+/spec/examples.txt
+
 .env.development
 .env.production
