@@ -5,7 +5,9 @@
 # when using this method to override method, headers, etc.
 
 module WebmockHelpers
-  SERVICES = {}.freeze
+  SERVICES = {
+    contentful_recipe_entries: { url: 'https://cdn.contentful.com/spaces/SPACE-ID/entries?sys.contentType.sys.id=recipe' }
+  }.freeze
 
   # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/ParameterLists, Metrics/LineLength
   # This method isn't very pretty, but we feel like abstracting it further wouldn't make it easier
