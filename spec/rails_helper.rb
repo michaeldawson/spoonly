@@ -7,8 +7,6 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 require 'webmock/rspec'
 
-ActiveRecord::Migration.maintain_test_schema!
-
 WebMock.disable_net_connect!(allow_localhost: true)
 
 # By default, Capybara only propagates errors in the test server thread that inherit from
@@ -28,21 +26,4 @@ RSpec.configure do |config|
   config.example_status_persistence_file_path = 'spec/examples.txt'
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
-
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.clean_with(:truncation)
-  end
-
-  config.before(:each, feature: true) do
-    # TODO: eventually, we should start the frontend server with the test suite, but for now, just
-    # require that the dev starts it manually.
-    ensure_selenium_server_running
-  end
-
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
-  end
 end

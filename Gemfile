@@ -17,9 +17,6 @@ gem 'httparty'
 # Environment variables
 gem 'dotenv-rails'
 
-# Faster boot up and auto-reloading
-gem 'bootsnap', '>= 1.1.0', require: false
-
 group :development do
   # Linting
   gem 'overcommit'
@@ -36,7 +33,6 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  gem 'database_cleaner'
   gem 'webmock'
 end
 

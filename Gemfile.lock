@@ -46,8 +46,6 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     ast (2.4.0)
-    bootsnap (1.4.4)
-      msgpack (~> 1.0)
     builder (3.2.3)
     capybara (3.27.0)
       addressable
@@ -64,7 +62,6 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    database_cleaner (1.7.0)
     diff-lcs (1.3)
     dotenv (2.7.4)
     dotenv-rails (2.7.4)
@@ -102,7 +99,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    msgpack (1.3.0)
     multi_xml (0.6.0)
     nio4r (2.4.0)
     nokogiri (1.10.3)
@@ -222,9 +218,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.1.0)
   capybara (>= 2.15)
-  database_cleaner
   dotenv-rails
   httparty
   listen
