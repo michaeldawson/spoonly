@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Spoonly is a web-3.0-big-data-cloud-AI-enabled application that will take down our competitors Marley Spoon and Hello Fresh in the meal kit industry.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+- Copy .env.test to .env.development and replace sample values with real ones
+- Run `bundle install` to install gem dependencies
+- Run `overcommit --install` to setup our ruby linting pre-commit hooks
+- Run `bundle exec rails server` to start the server
+- Visit http://localhost:3000 in your browser
 
-* System dependencies
+## Testing
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Run the test suite with `rspec`
+- If you don't have chromedriver installed, you'll need it, I suggest installing with brew on MacOS (otherwise you could try adding the `chromedriver-helper` gem)
