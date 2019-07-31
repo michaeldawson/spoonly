@@ -6,5 +6,6 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = ContentfulAPI::RecipeFetcher.recipe(params[:id])
+    raise "Derp" unless @recipe
   end
 end

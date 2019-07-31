@@ -17,4 +17,16 @@ feature 'Recipes', js: true do
       expect(page).to have_content('*Grilled Cheese 101*')
     end
   end
+
+  context "when looking for a recipe that doesn't exist", js: false do
+    before {
+      stub_service(:contentful_recipe_entries, response_fixture: :contentful_entries_no_results)
+    }
+
+    it 'raises a Derp error' do
+      expect {
+        visit recipe_path('knees-week-moms-spaghetti')
+      }.to raise_error('Derp')
+    end
+  end
 end
