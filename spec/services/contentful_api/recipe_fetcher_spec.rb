@@ -4,7 +4,7 @@ describe ContentfulAPI::RecipeFetcher do
   subject { described_class.new(ContentfulAPI.default) }
 
   describe '#recipes' do
-    before { stub_service(:contentful_recipe_entries) }
+    before { stub_service(:contentful_recipes_entries) }
 
     it 'returns recipes data with chef, tag and photo data merged in' do
       recipes = subject.recipes

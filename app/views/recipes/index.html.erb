@@ -1,0 +1,9 @@
+<h1>Recipes</h1>
+<p>Browse our delicious recipes to find the perfect meal for dinner tonight!</p>
+
+<% @recipes.each do |recipe| %>
+  <%= link_to recipe_path(recipe[:id]), class: 'recipe' do %>
+    <%= image_tag(recipe.dig(:photo, :file, :url)) %>
+    <%= recipe[:title] %>
+  <% end %>
+<% end %>

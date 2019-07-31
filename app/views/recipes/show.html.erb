@@ -1,0 +1,17 @@
+<div class='recipeShowPage'>
+  <h1><%= @recipe[:title] %></h1>
+  <p><%= @recipe[:description] %></p>
+  <% if @recipe[:chef] %>
+    <p>From celebrity chef <%= @recipe.dig(:chef, :name) %></p>
+  <% end %>
+
+  <em>
+    <%= @recipe[:tags].map { |tag| tag.fetch(:name) }.join(' | ') %>
+  </em>
+
+  <%= image_tag @recipe.dig(:photo, :file, :url) %>
+
+  <% if @recipe[:calories].present? %>
+    <p><em>Calories:</em> <%= @recipe[:calories] %></p>
+  <% end %>
+</div>

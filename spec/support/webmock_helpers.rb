@@ -6,7 +6,8 @@
 
 module WebmockHelpers
   SERVICES = {
-    contentful_recipe_entries: { url: 'https://cdn.contentful.com/spaces/SPACE-ID/entries?sys.contentType.sys.id=recipe' }
+    contentful_recipes_entries: { url: 'https://cdn.contentful.com/spaces/SPACE-ID/entries?sys.contentType.sys.id=recipe' },
+    contentful_recipe_entries: { url: %r{https://cdn.contentful.com/spaces/SPACE-ID/entries\?sys.contentType.sys.id=recipe&sys.id=.+} }
   }.freeze
 
   # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/ParameterLists, Metrics/LineLength

@@ -9,7 +9,7 @@ describe ContentfulAPI do
 
   describe '#recipe_entries' do
     context 'when the service returns recipe_entries' do
-      before { stub_service(:contentful_recipe_entries) }
+      before { stub_service(:contentful_recipes_entries) }
 
       it 'returns the recipe data' do
         recipe_entries = subject.recipe_entries
@@ -22,7 +22,7 @@ describe ContentfulAPI do
     end
 
     context 'when the service returns an error' do
-      before { stub_service(:contentful_recipe_entries, status: 400) }
+      before { stub_service(:contentful_recipes_entries, status: 400) }
 
       it 'raises a network error' do
         expect {
