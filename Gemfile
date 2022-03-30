@@ -5,7 +5,7 @@ ruby '2.5.1'
 
 # Server
 gem 'rails', '~> 5.2.3'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 
 # Assets
 gem 'sass-rails', '~> 5.0'
